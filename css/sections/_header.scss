@@ -1,0 +1,70 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $black;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #logo {
+      height: 5.5rem;
+      text-transform: uppercase;
+      @include center-display;
+      font-size: 3rem;
+      font-weight: bolder;
+      color: $red;
+      span {
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+    .toggle-btn {
+      color: $white;
+      font-size: 3rem;
+      display: none;
+      cursor: pointer;
+      i {
+        &.fa-times {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    nav {
+      display: flex;
+      a {
+        color: $white;
+        font-size: 1.7rem;
+        font-weight: 300;
+        padding: 0 2rem;
+        height: 5.5rem;
+        @include center-display;
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .toggle-btn {
+      display: block !important;
+    }
+    nav {
+      position: absolute;
+      width: 100%;
+      top: 90%;
+      left: 0;
+      clip-path: polygon(0 0, 100% 0, 0 0, 100% 0);
+      flex-direction: column;
+      background-color: $black;
+      &.open {
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin center-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin padding-section {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+@mixin paragraph-style {
+  color: $light-white;
+  line-height: 1.9;
+  font-size: 1.5rem;
+}

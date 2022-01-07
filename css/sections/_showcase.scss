@@ -1,0 +1,29 @@
+.showcase {
+  .slide {
+    height: 80vh;
+    background-size: cover !important;
+    background-position: center !important;
+    .container {
+      height: 100%;
+      display: flex;
+      .content {
+        align-self: center;
+        width: 60rem;
+        p {
+          color: $red;
+          font-size: 2rem;
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 5rem;
+          font-weight: 600;
+          color: $white;
+          margin-top: 1.5rem;
+        }
+        a {
+          margin-top: 1.3rem;
+        }
+      }
+    }
+  }
+}

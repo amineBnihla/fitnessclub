@@ -1,0 +1,72 @@
+.pricing {
+  @include padding-section;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    row-gap: 1.5rem;
+    color: $white;
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  .plan {
+    li {
+      padding: 1.3rem 0;
+      position: relative;
+      padding-left: 3rem;
+      font-size: 1.6rem;
+      color: $light-white;
+      &::before {
+        content: "\f00c";
+        font-weight: bolder;
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        left: 0;
+        color: $red;
+      }
+    }
+    &:not(:first-child) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+      h3 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        margin-top: 2rem;
+      }
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        span {
+          color: $red;
+          font-size: 4rem;
+        }
+      }
+    }
+    &:first-child {
+      padding: 0 0.5rem;
+      h4 {
+        color: $red;
+        font-size: 2rem;
+      }
+      h1 {
+        margin: 1rem 0;
+        color: $white;
+        font-size: 4rem;
+        font-weight: bolder;
+      }
+      p {
+        color: $light-white;
+        line-height: 1.9;
+        font-size: 1.4rem;
+      }
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(130deg, $light-bg 93%, transparent 90%);
+    }
+    .offers {
+      margin: 1rem 0;
+    }
+  }
+}

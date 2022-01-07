@@ -1,0 +1,89 @@
+.about {
+  @include padding-section;
+  min-height: 100vh;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    height: 100%;
+    position: relative;
+    .about-img {
+      padding: 2rem;
+      max-width: 47rem;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        background-color: $red;
+      }
+      &::after {
+        top: 0;
+        left: 0;
+      }
+      &::before {
+        bottom: 0;
+        right: 0;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .about-content {
+      flex-basis: 50%;
+      h4 {
+        color: $red;
+        font-size: 2rem;
+      }
+      h1 {
+        margin: 1rem 0;
+        color: $white;
+        font-size: 3.5rem;
+        font-weight: bolder;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin-top: 1rem;
+        gap: 2rem;
+      }
+      h3 {
+        color: $white;
+        font-size: 2rem;
+        font-weight: bolder;
+        padding-left: 3rem;
+        position: relative;
+        &::before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          position: absolute;
+          left: 0;
+          color: $red;
+        }
+      }
+      a {
+        margin-top: 1.3rem;
+      }
+      p {
+        color: $light-white;
+        line-height: 1.8;
+        font-size: 1.4rem;
+        margin: 1.3rem 2.3rem 1.3rem 0;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .about {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

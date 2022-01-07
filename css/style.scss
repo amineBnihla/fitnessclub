@@ -1,0 +1,114 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+$red: #ffa600;
+$black: rgb(15, 15, 15);
+$white: #fff;
+$light-white: #aaa;
+$light-bg: #111;
+body {
+  background-color: $black;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  color: $white;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  display: inline-block;
+  background: linear-gradient(130deg, $red 93%, transparent 93%);
+  position: relative;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.title {
+  position: relative;
+  margin-bottom: 4rem;
+  h1 {
+    width: fit-content;
+    font-size: 3rem;
+    color: $red;
+    padding: 0.5rem 1.1rem;
+    margin: 0 auto;
+    border: 1px solid $light-white;
+    border-radius: 0.5rem;
+    background-color: $black;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    background-color: $light-white;
+    transform: translateY(-50%);
+  }
+}
+.swiper-pagination-bullet {
+  width: 2rem;
+  height: 2rem;
+  background-color: $white;
+  border-radius: 0;
+  &.swiper-pagination-bullet-active {
+    background-color: $red;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@import "mixins";
+@import "sections/header";
+@import "sections/showcase";
+@import "sections/about";
+@import "sections/features";
+@import "sections/pricing";
+@import "sections/trainers";
+@import "sections/joinUs";
+@import "sections/testemonials";
+@import "sections/posts";
+@import "sections/footer";
